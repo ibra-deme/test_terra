@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                bat "cd %TERRA_DIR% && terraform plan"
+                bat "cd %TERRA_DIR% && terraform plan -out=tfplan"
             }
         }
         stage('Apply') {
             steps {
-                bat "cd %TERRA_DIR% && terraform apply"
+                bat "cd %TERRA_DIR% && terraform apply -auto-approve tfplan"
             }
         }
     }
