@@ -8,7 +8,6 @@ resource "kubernetes_deployment" "php-deployment" {
 
     metadata {
       name="appli-base"
-      namespace ="default"
     }
     spec {
       replicas = 2
