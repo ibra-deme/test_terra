@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        KUBECONFIG = credentials('Kube_token')
+    }
     stages {
         stage('Init') {
             steps {
