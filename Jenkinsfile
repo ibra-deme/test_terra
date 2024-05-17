@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('test') {
+        stage('Init') {
             steps {
                 bat "terraform init"
             }
         }
-        stage('test') {
+        stage('Plan') {
             steps {
                 bat "terraform plan"
             }
         }
-        stage('test') {
+        stage('Apply') {
             steps {
                 bat "terraform apply"
             }
