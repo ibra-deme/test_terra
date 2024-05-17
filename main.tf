@@ -7,7 +7,7 @@ provider "kubernetes" {
 resource "kubernetes_deployment" "php-deployment" {
 
     metadata {
-      name="appli-base"
+      name="application-base"
     }
     spec {
       replicas = 2
@@ -52,7 +52,7 @@ resource "kubernetes_deployment" "php-deployment" {
     }
 }
 
-resource "kubernetes_service" "service-php" {
+resource "kubernetes_service" "services-php" {
 
     metadata {
       name = "service-php"
