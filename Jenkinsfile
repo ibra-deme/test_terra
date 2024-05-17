@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                bat "terraform plan"
+                bat "cd %TERRA_DIR% && terraform plan"
             }
         }
         stage('Apply') {
             steps {
-                bat "terraform apply"
+                bat "cd %TERRA_DIR% && terraform apply"
             }
         }
     }
