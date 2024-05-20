@@ -66,7 +66,6 @@ resource "kubernetes_service" "services-php" {
         name = "http"
         protocol = "TCP"
         port = 80
-        node_port = 30104
         target_port = 80
       }
       type = "NodePort"
